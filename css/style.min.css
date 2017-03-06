@@ -2599,12 +2599,14 @@ button.swiper-pagination-bullet {
     text-align: center; }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5)));
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.75)));
   background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
   background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75)); }
 
 .swiper-container-3d .swiper-slide-shadow-right {
+  border-radius: 50%;
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.75)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
@@ -2617,39 +2619,38 @@ button.swiper-pagination-bullet {
     right: 0;
     bottom: 0; } }
 
-.index-button .row {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.index-button {
   border-top: 1px solid #EEEEEE; }
-  .index-button .row a {
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-    display: block;
-    text-align: center;
-    padding: 20px 0;
-    line-height: 1;
-    background-color: #FFFFFF; }
-    .index-button .row a:active {
-      background-color: #F5F6F7; }
-    .index-button .row a:nth-child(2) {
-      border-left: 1px solid #EEEEEE; }
-
-.index-button i {
-  display: inline-block;
-  font-size: 35px;
-  color: #669933;
-  margin-bottom: 10px; }
-
-.index-button p {
-  color: #333333;
-  margin-bottom: 4px; }
-
-.index-button span {
-  color: #aaaaaa;
-  font-family: Georgia;
-  font-size: 10px; }
+  .index-button .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #EEEEEE; }
+    .index-button .row a {
+      -webkit-flex-grow: 1;
+      -ms-flex-grow: 1;
+      flex-grow: 1;
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      line-height: 1;
+      background-color: #FFFFFF; }
+      .index-button .row a:active {
+        background-color: #F5F6F7; }
+      .index-button .row a:nth-child(2) {
+        border-left: 1px solid #EEEEEE; }
+  .index-button i {
+    display: inline-block;
+    font-size: 35px;
+    color: #669933;
+    margin-bottom: 10px; }
+  .index-button p {
+    color: #333333;
+    margin-bottom: 4px; }
+  .index-button span {
+    color: #aaaaaa;
+    font-family: Georgia;
+    font-size: 10px; }
 
 .image-center {
   display: -webkit-flex;

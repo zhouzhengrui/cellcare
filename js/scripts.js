@@ -1,3 +1,6 @@
+// fix:active
+document.body.addEventListener('touchstart', function() {});
+
 // --------------------------------------------- swiper --------------------------------------------- //
 
 // role swiper
