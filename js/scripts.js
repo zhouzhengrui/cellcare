@@ -5,7 +5,7 @@ var roleTab = new Swiper('#role-tab', {
     effect: 'coverflow',
     coverflow: {
         rotate: 0,
-        stretch: -10,
+        stretch: 0,
         depth: 0,
         modifier: 1,
         slideShadows: false
