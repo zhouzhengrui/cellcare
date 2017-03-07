@@ -111,7 +111,12 @@ elems.forEach(function(html) {
 jQuery(document).ready(function($) {
 
     // touch
-    touch.on('a.group', 'tap', function() {
+    // touch.on('a.group', 'tap', function(event) {
+    //     event.preventDefault();
+    //     $(this).addClass('active');
+    // });
+
+    $('.group').click(function() {
         $(this).addClass('active');
     });
 

@@ -40,6 +40,7 @@ body {
   -ms-content-zooming: none;
   touch-action: manipulation;
   word-wrap: break-word;
+  -webkit-user-select: none;
   user-select: none; }
 
 a {
