@@ -114,10 +114,6 @@ Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), functio
 
 jQuery(document).ready(function($) {
 
-    $('.group').click(function() {
-        $(this).addClass('active');
-    });
-
     // image lazyload
     $('img.lazyload').lazyload({
         container: $('.main'),
