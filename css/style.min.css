@@ -1410,7 +1410,7 @@ button.swiper-pagination-bullet {
 .list-news .group {
   display: block;
   padding: 15px 20px 15px 45px; }
-  .list-news .group:active {
+  .list-news .group.active {
     background-color: #F5F6F7; }
   .list-news .group:after {
     top: 22px;

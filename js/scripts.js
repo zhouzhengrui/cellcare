@@ -1,6 +1,3 @@
-// fix:active
-document.body.addEventListener('touchstart', function() {});
-
 // --------------------------------------------- swiper --------------------------------------------- //
 
 // role swiper
@@ -19,11 +16,11 @@ var roleTab = new Swiper('#role-tab', {
     initialSlide: 1,
     onlyExternal: true,
     slideToClickedSlide: true,
-    watchSlidesProgress : true,
-    watchSlidesVisibility : true,
-    onTap: function(){
-		roleImage.slideTo( roleTab.clickedIndex)
-	}
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    onTap: function() {
+        roleImage.slideTo(roleTab.clickedIndex)
+    }
 });
 
 var roleImage = new Swiper('#role-image', {
@@ -112,6 +109,10 @@ elems.forEach(function(html) {
 });
 
 jQuery(document).ready(function($) {
+
+    $('a.group').on('tap', function () {
+        $(this).addClass('active');
+    });
 
     // image lazyload
     $('img.lazyload').lazyload({
