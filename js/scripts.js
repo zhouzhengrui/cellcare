@@ -108,9 +108,7 @@ elems.forEach(function(html) {
     });
 });
 
-Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
-  new RippleEffect(element);
-});
+Waves.displayEffect();
 
 jQuery(document).ready(function($) {
 
