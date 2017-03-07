@@ -108,7 +108,7 @@ elems.forEach(function(html) {
     });
 });
 
-// Waves.displayEffect();
+Waves.displayEffect();
 
 jQuery(document).ready(function($) {
 
