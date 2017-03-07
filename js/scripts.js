@@ -108,13 +108,11 @@ elems.forEach(function(html) {
     });
 });
 
-jQuery(document).ready(function($) {
+Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+  new RippleEffect(element);
+});
 
-    // touch
-    // touch.on('a.group', 'tap', function(event) {
-    //     event.preventDefault();
-    //     $(this).addClass('active');
-    // });
+jQuery(document).ready(function($) {
 
     $('.group').click(function() {
         $(this).addClass('active');
