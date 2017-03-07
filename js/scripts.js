@@ -108,16 +108,14 @@ elems.forEach(function(html) {
     });
 });
 
-// var hammertime = new Hammer(document.getElementsByClassName("group"));
-// hammertime.on("tap", function(e) {
-//     document.getElementById("result").innerHTML += "点击触发了，长按无效<br />";
-//     console.log(e);
-// });
-
-// var test = document.getElementsByClassName("group");
-touch.on('.group', 'swipe', function());
-
 jQuery(document).ready(function($) {
+
+    // touch
+    touch.on('a.group', 'tap', function(ev) {
+        ev.startRotate();
+        ev.originEvent.preventDefault();
+        $(this).addClass('active');
+    });
 
     // image lazyload
     $('img.lazyload').lazyload({
@@ -132,9 +130,7 @@ jQuery(document).ready(function($) {
         radioClass: 'radio',
     });
 
-    // --------------------------------------------- fly --------------------------------------------- //
-
-    // 计算offset
+    // fly
     var resetOffset = function() {
         var offset = $("#cart").offset();
         if (offset == null) {
@@ -146,14 +142,11 @@ jQuery(document).ready(function($) {
         return offset;
     }
     var offset = resetOffset();
-    // 如果窗口大小发生变化时需要重新计算
     window.onresize = function() {
         offset = resetOffset(offset);
     }
     $(".add-cart").click(function(event) {
-        //AJAX添加到购物车
         var flag = false;
-        //AJAX添加成功后设置flag=true
         var addCart = $(this);
         var flyer = $('<div class="flyer"></div>');
         flyer.fly({
