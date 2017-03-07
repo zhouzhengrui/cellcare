@@ -108,11 +108,16 @@ elems.forEach(function(html) {
     });
 });
 
-jQuery(document).ready(function($) {
+// var hammertime = new Hammer(document.getElementsByClassName("group"));
+// hammertime.on("tap", function(e) {
+//     document.getElementById("result").innerHTML += "点击触发了，长按无效<br />";
+//     console.log(e);
+// });
 
-    $('a.group').on('tap', function () {
-        $(this).addClass('active');
-    });
+// var test = document.getElementsByClassName("group");
+touch.on('.group', 'swipe', function());
+
+jQuery(document).ready(function($) {
 
     // image lazyload
     $('img.lazyload').lazyload({
