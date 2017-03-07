@@ -111,9 +111,7 @@ elems.forEach(function(html) {
 jQuery(document).ready(function($) {
 
     // touch
-    touch.on('a.group', 'tap', function(ev) {
-        ev.startRotate();
-        ev.originEvent.preventDefault();
+    touch.on('a.group', 'tap', function() {
         $(this).addClass('active');
     });
 
