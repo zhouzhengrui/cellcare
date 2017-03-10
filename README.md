@@ -34,6 +34,11 @@
 
 ## Pages
 
-- 客户端首页 `index.html`
+- 客户端-首页 `index.html`
+- 客户端-人员内容 `1-role-content.html`
+- 客户端-专属客服 `1-service.html`
+- 客户端-医疗资讯 `1-news.html`
+- 客户端-医疗资讯-内容 `1-news-content.html`
+- 客户端-附近门店 `1-store.html`
 
 [⬆ back to top](#readme)
