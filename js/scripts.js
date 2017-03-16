@@ -67,9 +67,18 @@ function delayedSpik() {
     $("body").find("a.waves-effect").each(function(i) {
         href[i] = $(this).attr("href");
         $(this).attr("href", "javascript:;");
-        $(this).bind("click", function(event) {
+        $(this).bind("click", function() {
             window.setTimeout(function() {
                 location.href = href[i];
+            }, 300);
+        });
+    });
+    var dataHref = [];
+    $("div.waves-effect").each(function(i) {
+        dataHref[i] = $(this).data('href');
+        $(this).bind("click", function() {
+            window.setTimeout(function() {
+                location.href = dataHref[i];
             }, 300);
         });
     });
@@ -77,15 +86,60 @@ function delayedSpik() {
 
 delayedSpik();
 
+// scroll fix
+var overscroll = function(el) {
+    el.addEventListener('touchstart', function() {
+        var top = el.scrollTop,
+            totalScroll = el.scrollHeight,
+            currentScroll = top + el.offsetHeight
+        if (top === 0) {
+            el.scrollTop = 1
+        } else if (currentScroll === totalScroll) {
+            el.scrollTop = top - 1
+        }
+    })
+    el.addEventListener('touchmove', function(evt) {
+        if (el.offsetHeight < el.scrollHeight)
+            evt._isScroller = true
+    })
+}
+overscroll(document.querySelector('.main'));
+document.body.addEventListener('touchmove', function(evt) {
+    if (!evt._isScroller) {
+        evt.preventDefault()
+    }
+})
+
 // jQuery
 jQuery(document).ready(function($) {
 
+    // 链接嵌套 fix
+    $('.button-group .button').on("click", function(e) {
+        e.stopPropagation();
+    });
+
+    // searchbar
+    $('.searchbar .search').focus(function() {
+        $('.searchbar .icon-search').addClass('focus');
+        $(this).blur(function() {
+            $('.searchbar .icon-search').removeClass('focus');
+        })
+    })
+
+    // button
+    $('.button').click(function() {
+        $(this).removeClass('active').addClass('active');
+        var set = setTimeout(function() {
+            $('.button').removeClass('active');
+        }, 100)
+    });
+
     // button wave
     $('.button-wave').click(function() {
-        $(this).removeClass('active').addClass('active');
-        var set = setTimeout(function(){
-            $('.button-wave').removeClass('active');
-        },750)
+        $(this).removeClass('wave').addClass('wave');
+        var set = setTimeout(function() {
+            $('.button-wave').removeClass('wave');
+        }, 500)
     });
 
     // image lazyload
