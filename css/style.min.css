@@ -1491,6 +1491,12 @@ button.swiper-pagination-bullet {
     margin-bottom: 5px; }
     .list-card .column p:last-child {
       margin-bottom: 0; }
+  .list-card-button-group {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .list-card-button-group-right .button {
+      margin-left: 10px; }
   .list-card .cart-header {
     display: -webkit-flex;
     display: -ms-flexbox;
