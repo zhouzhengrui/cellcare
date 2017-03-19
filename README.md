@@ -4,9 +4,15 @@
 
 ## GitHub Pages
 
-<https://zhouzhengrui.github.io/cellcare/>
+<https://zhouzhengrui.github.io/cellcare/> 客户端
+<https://zhouzhengrui.github.io/cellcare/2-chat.html> 员工端
 
 ## Update
+
+### 2017-3-20
+
+- 解决body拖拽/滑屏/border.5px/点击穿透/链接跳转等问题
+- 上传员工端部分页面
 
 ### 2017-3-10
 
@@ -21,6 +27,7 @@
 ## Plugin
 
 - [jQuery - 1.9.1](http://jquery.com/)
+- [滚动 - iScroll 5.2.0](https://github.com/cubiq/iscroll)
 - [滑动(tab/slide) - swiper 3.3.1](http://idangero.us/swiper/)
 - [图片延迟加载 - lazyload 1.9.3](http://www.appelsiini.net/projects/lazyload)
 - [模态窗口 - ModalWindowEffects 1.0.0](https://github.com/codrops/ModalWindowEffects)
@@ -40,5 +47,17 @@
 - 客户端-医疗资讯 `1-news.html`
 - 客户端-医疗资讯-内容 `1-news-content.html`
 - 客户端-附近门店 `1-store.html`
+
+- 员工端-聊天 `2-chat.html`
+- 员工端-顾客 `2-customer.html`
+- 员工端-顾客信息 `2-customer-content.html`
+- 员工端-顾客信息-编辑 `2-customer-edit.html`
+- 员工端-群组 `2-group.html`
+- 员工端-群组信息 `2-group-content.html`
+- 员工端-我 `2-user.html`
+- 员工端-我-我的二维码 `2-user-code.html`
+- 员工端-我-手机号码 `2-user-phone.html`
+- 员工端-我-擅长 `2-user-begood.html`
+- 员工端-我-简介 `2-user-introduce.html`
 
 [⬆ back to top](#readme)

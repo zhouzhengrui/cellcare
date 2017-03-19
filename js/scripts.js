@@ -1,3 +1,46 @@
+// scroll
+function isPassive() {
+    var supportsPassiveOption = false;
+    try {
+        addEventListener("test", null, Object.defineProperty({}, 'passive', {
+            get: function() {
+                supportsPassiveOption = true;
+            }
+        }));
+    } catch (e) {}
+    return supportsPassiveOption;
+}
+
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, isPassive() ? {
+    capture: false,
+    passive: false
+} : false);
+
+var mainScroll;
+var bottomModalScroll;
+
+function loaded() {
+
+    mainScroll = new IScroll('.main', {
+        scrollbars: 'custom',
+        fadeScrollbars: true,
+        shrinkScrollbars: 'scale',
+        click: true
+    });
+
+    if (document.querySelector(".bottom-modal-scroll")) {
+        bottomModalScroll = new IScroll('.bottom-modal-scroll', {
+            scrollbars: 'custom',
+            fadeScrollbars: true,
+            shrinkScrollbars: 'scale',
+            click: true
+        });
+    }
+
+}
+
 // role swiper
 var roleTab = new Swiper('#role-tab', {
     effect: 'coverflow',
@@ -44,10 +87,12 @@ var roleInfo = new Swiper('#role-info', {
 });
 
 roleTab.params.control = [roleInfo];
+
 roleImage.params.control = [roleTab];
 
 // switchery
 var elems = Array.prototype.slice.call(document.querySelectorAll('.switch'));
+
 elems.forEach(function(html) {
     var switchery = new Switchery(html, {
         className: 'switch',
@@ -86,35 +131,11 @@ function delayedSpik() {
 
 delayedSpik();
 
-// scroll fix
-var overscroll = function(el) {
-    el.addEventListener('touchstart', function() {
-        var top = el.scrollTop,
-            totalScroll = el.scrollHeight,
-            currentScroll = top + el.offsetHeight
-        if (top === 0) {
-            el.scrollTop = 1
-        } else if (currentScroll === totalScroll) {
-            el.scrollTop = top - 1
-        }
-    })
-    el.addEventListener('touchmove', function(evt) {
-        if (el.offsetHeight < el.scrollHeight)
-            evt._isScroller = true
-    })
-}
-overscroll(document.querySelector('.main'));
-document.body.addEventListener('touchmove', function(evt) {
-    if (!evt._isScroller) {
-        evt.preventDefault()
-    }
-})
-
 // jQuery
 jQuery(document).ready(function($) {
 
     // 链接嵌套 fix
-    $('.button-group .button').on("click", function(e) {
+    $('.list-button-group .button').on("click", function(e) {
         e.stopPropagation();
     });
 

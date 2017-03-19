@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2fpz2u');
-  src:  url('fonts/icomoon.eot?2fpz2u#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2fpz2u') format('truetype'),
-    url('fonts/icomoon.woff?2fpz2u') format('woff'),
-    url('fonts/icomoon.svg?2fpz2u#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?d08rzk');
+  src:  url('fonts/icomoon.eot?d08rzk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?d08rzk') format('truetype'),
+    url('fonts/icomoon.woff?d08rzk') format('woff'),
+    url('fonts/icomoon.svg?d08rzk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -86,6 +86,24 @@ i {
 }
 .icon-pen:before {
   content: "\e91a";
+}
+.icon-camera:before {
+  content: "\e91c";
+}
+.icon-QRcode:before {
+  content: "\e91d";
+}
+.icon-phone:before {
+  content: "\e91e";
+}
+.icon-praise:before {
+  content: "\e91f";
+}
+.icon-document:before {
+  content: "\e920";
+}
+.icon-window:before {
+  content: "\e921";
 }
 .icon-message:before {
   content: "\e917";

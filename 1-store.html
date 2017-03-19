@@ -8,18 +8,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>附近门店</title>
-    <!-- CSS start -->
+    <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- CSS over -->
+    <!-- JS -->
+    <script type="text/javascript" src="js/system.js"></script>
+
 </head>
 
 
-<body>
-    <!-- container start -->
-    <div class="container">
-        <!-- main start -->
-        <div class="main">
+<body onload="loaded()">
+    <!-- main start -->
+    <div class="main">
+        <div class="scroller">
             <!-- location start -->
             <div class="locationbar">
                 <div class="info">
@@ -97,10 +98,9 @@
                 <!-- item over -->
             </div>
             <!-- list over -->
-         </div>
-        <!-- main over -->
-    </div>
-    <!-- container over -->
+        </div>
+     </div>
+    <!-- main over -->
 
     <!-- modal start -->
     <aside class="md-modal md-effect-stick-right" id="modal-1">
@@ -142,6 +142,7 @@
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="js/iCheck/icheck.min.js"></script>

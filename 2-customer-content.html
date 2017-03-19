@@ -8,20 +8,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>顾客信息</title>
-    <!-- CSS start -->
+    <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- CSS over -->
+    <!-- JS -->
+    <script type="text/javascript" src="js/system.js"></script>
+
 </head>
 
 
-<body>
-    <!-- container start -->
-    <div class="container gray">
-        <!-- main start -->
-        <div class="main">
+<body onload="loaded()">
+    <!-- main start -->
+    <div class="main gray">
+        <div class="scroller">
             <!-- panel start -->
-            <div class="panel-user">
+            <div class="panel-customer">
                 <div class="background"></div>
                 <div class="topbar">
                     <button class="button button-mini button-smooth button-outline button-outline-white left-icon">
@@ -46,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="button-group button-group-right">
+                    <div class="panel-button-group panel-button-group-right">
                         <a href="#" class="button button-round button-round-large button-outline button-wave button-wave-light">
                             <span class="button-inner"><i class="icon-message"></i></span>
                         </a>
@@ -63,8 +64,6 @@
                 <span class="label label-small label-round label-outline label-outline-red">沉鱼落雁</span>
                 <span class="label label-small label-round label-outline label-outline-yellow">闭月羞花</span>
                 <span class="label label-small label-round label-outline label-outline-blue">眉目如画</span>
-                <span class="label label-small label-round label-outline label-outline-red">老司机</span>
-                <span class="label label-small label-round label-outline label-outline-red">带带我</span>
             </div>
             <!-- label over -->
             <!-- list start -->
@@ -72,40 +71,28 @@
                 <!-- item start -->
                 <a href="2-group-build.html" class="item waves-effect arrow-right">
                     <div class="row">
-                        <label class="label">
-                            <i class="icon-group"></i>
-                            <p>创建群组</p>
-                        </label>
+                        <label class="label"><i class="icon-group"></i>创建群组</label>
                     </div>
                 </a>
                 <!-- item over -->
                 <!-- item start -->
                 <a href="#" class="item waves-effect arrow-right">
                     <div class="row">
-                        <label class="label">
-                            <i class="icon-chat-2"></i>
-                            <p>聊天记录</p>
-                        </label>
+                        <label class="label"><i class="icon-chat-3"></i>聊天记录</label>
                     </div>
                 </a>
                 <!-- item over -->
                 <!-- item start -->
-                <a href="2-customer-label-html" class="item waves-effect arrow-right">
+                <a href="2-customer-label.html" class="item waves-effect arrow-right">
                     <div class="row">
-                        <label class="label">
-                            <i class="icon-label"></i>
-                            <p>标签管理</p>
-                        </label>
+                        <label class="label"><i class="icon-label"></i>标签管理</label>
                     </div>
                 </a>
                 <!-- item over -->
                 <!-- item start -->
-                <a href="2-customer-edit-html" class="item waves-effect arrow-right">
+                <a href="2-customer-edit.html" class="item waves-effect arrow-right">
                     <div class="row">
-                        <label class="label">
-                            <i class="icon-pen"></i>
-                            <p>顾客信息编辑</p>
-                        </label>
+                        <label class="label"><i class="icon-pen"></i>顾客信息编辑</label>
                     </div>
                 </a>
                 <!-- item over -->
@@ -166,13 +153,13 @@
                 <!-- item over -->
             </div>
             <!-- list over -->
-         </div>
-        <!-- main over -->
-    </div>
-    <!-- container over -->
+        </div>
+     </div>
+    <!-- main over -->
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="js/iCheck/icheck.min.js"></script>

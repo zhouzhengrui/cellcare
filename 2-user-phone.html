@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <title>医疗资讯</title>
+    <title>手机号码</title>
     <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,38 +19,51 @@
 
 <body onload="loaded()">
     <!-- main start -->
-    <div class="main">
+    <div class="main gray">
         <div class="scroller">
+            <div class="spacing"></div>
             <!-- list start -->
-            <div class="list-news">
-                <h2 class="year">2017</h2>
-                <a href="1-news-content.html" class="group waves-effect">
-                    <p class="title">携总理嘱托 美丽田园打造博鳌国际医疗中心</p>
-                    <span class="date">2月12日</span>
-                </a>
-                <a href="1-news-content.html" class="group waves-effect">
-                    <p class="title">我国首部《医学抗衰老行业技术规范化指南》发布</p>
-                    <span class="date">2月12日</span>
-                </a>
-                <h2 class="year">2016</h2>
-                <a href="1-news-content.html" class="group waves-effect">
-                    <p class="title">携总理嘱托 美丽田园打造博鳌国际医疗中心</p>
-                    <span class="date">2月12日</span>
-                </a>
-                <a href="1-news-content.html" class="group waves-effect">
-                    <p class="title">携总理嘱托 美丽田园打造博鳌国际医疗中心</p>
-                    <span class="date">2月12日</span>
-                </a>
-                <a href="2-chat.html" class="group waves-effect">
-                    <p class="title">我国首部《医学抗衰老行业技术规范化指南》发布</p>
-                    <span class="date">2月12日</span>
-                </a>
+            <div class="list list-border">
+                <!-- item start -->
+                <div class="item">
+                    <div class="row">
+                        <label class="label">手机号码</label>
+                        <div class="input">
+                            <input class="input" type="tel" placeholder="请输入您的手机号码">
+                        </div>
+                    </div>
+                </div>
+                <!-- item over -->
             </div>
-            <a href="#" class="load-more waves-effect">点击加载更多资讯</a>
             <!-- list over -->
+            <!-- button start -->
+            <div class="button-group">
+                <button class="button button-block">
+                    <span class="button-inner">提交</span>
+                </button>
+            </div>
+            <!-- button over -->
         </div>
      </div>
     <!-- main over -->
+
+    <!-- modal start -->
+    <div class="md-modal md-effect-stick-bottom" id="modal-area">
+        <div class="md-content">
+            <div class="area-title">
+                <button class="area-back" id="area-back"><i class="icon-back"></i></button>
+                <h3 class="title">选择地区</h3>
+                <button class="area-close md-close"><i class="icon-cancel"></i></button>
+            </div>
+            <div class="area-content bottom-modal-scroll" id="area-content">
+                <div class="scroller">
+                    <ul class="area-list" id="area-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    <!-- modal over -->
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -64,6 +77,8 @@
     <script type="text/javascript" src="js/waves/waves.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
+
+    <script type="text/javascript" src="js/area/jquery.area.js"></script>
 
 </body>
 

@@ -8,42 +8,43 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>聊天</title>
-    <!-- CSS start -->
+    <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- CSS over -->
+    <!-- JS -->
+    <script type="text/javascript" src="js/system.js"></script>
+
 </head>
 
 
-<body>
-    <!-- container start -->
-    <div class="container">
-        <!-- footer start -->
-        <footer class="footer">
-            <nav class="navbar">
-                <a class="active" href="2-chat.html">
-                    <i class="icon-chat-2"></i>
-                    <span class="badge">8</span>
-                    <p>聊天</p>
-                </a>
-                <a class="" href="2-customer.html">
-                    <i class="icon-user-book"></i>
-                    <p>顾客</p>
-                </a>
-                <a class="" href="2-group.html">
-                    <i class="icon-group"></i>
-                    <p>群组</p>
-                </a>
-                <a class="" href="2-user.html">
-                    <i class="icon-user"></i>
-                    <p>我</p>
-                </a>
-            </nav>
-        </footer>
-        <!-- footer over -->
+<body onload="loaded()">
+    <!-- footer start -->
+    <footer class="footer">
+        <nav class="navbar">
+            <a class="active" href="2-chat.html">
+                <i class="icon-chat-2"></i>
+                <span class="badge">8</span>
+                <p>聊天</p>
+            </a>
+            <a class="" href="2-customer.html">
+                <i class="icon-user-book"></i>
+                <p>顾客</p>
+            </a>
+            <a class="" href="2-group.html">
+                <i class="icon-group"></i>
+                <p>群组</p>
+            </a>
+            <a class="" href="2-user.html">
+                <i class="icon-user"></i>
+                <p>我</p>
+            </a>
+        </nav>
+    </footer>
+    <!-- footer over -->
 
-        <!-- main start -->
-        <div class="main">
+    <!-- main start -->
+    <div class="main">
+        <div class="scroller">
             <!-- list start -->
             <div class="list">
                 <!-- item start -->
@@ -54,7 +55,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <span class="label label-mini label-round label-outline label-outline-gray icon-left"><i class="icon-fire"></i>活跃</span>
+                            <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                         </div>
                     </div>
                 </a>
@@ -67,7 +68,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <span class="label label-mini label-round label-outline label-outline-gray icon-left"><i class="icon-fire"></i>活跃</span>
+                            <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                         </div>
                     </div>
                 </a>
@@ -80,20 +81,20 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <span class="label label-mini label-round label-outline label-outline-gray icon-left"><i class="icon-fire"></i>活跃</span>
+                            <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                         </div>
                     </div>
                 </a>
                 <!-- item over -->
             </div>
             <!-- list over -->
-         </div>
-        <!-- main over -->
-    </div>
-    <!-- container over -->
+        </div>
+     </div>
+    <!-- main over -->
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="js/iCheck/icheck.min.js"></script>

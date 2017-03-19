@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <title>专属客服</title>
+    <title>擅长</title>
     <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,12 +19,31 @@
 
 <body onload="loaded()">
     <!-- main start -->
-    <div class="main">
-        <!-- image start -->
-        <div class="image-center">
-            <img class="animated fadeInUp" src="img/chatTips.png" alt="">
+    <div class="main gray">
+        <div class="scroller">
+            <div class="spacing"></div>
+            <!-- list start -->
+            <div class="list list-border">
+                <!-- item start -->
+                <div class="item">
+                    <div class="row">
+                        <label class="label top-fixed">擅长</label>
+                        <div class="input">
+                            <textarea class="textarea" name="name" rows="4" placeholder="请输入文字"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- item over -->
+            </div>
+            <!-- list over -->
+            <!-- button start -->
+            <div class="button-group">
+                <button class="button button-block">
+                    <span class="button-inner">提交</span>
+                </button>
+            </div>
+            <!-- button over -->
         </div>
-        <!-- image over -->
      </div>
     <!-- main over -->
 
@@ -40,6 +59,8 @@
     <script type="text/javascript" src="js/waves/waves.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
+
+    <script type="text/javascript" src="js/area/jquery.area.js"></script>
 
 </body>
 
