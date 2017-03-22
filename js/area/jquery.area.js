@@ -564,7 +564,7 @@ function selectC(p, c) {
             areaExpress += sCity + " ";
         }
     }
-    $("#area-back").attr("ontap", "selectP(" + p + ");");
+    $("#area-back").attr("onClick", "selectP(" + p + ");");
     bottomModalScroll.refresh();
 }
 

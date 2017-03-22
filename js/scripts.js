@@ -27,8 +27,8 @@ function loaded() {
         scrollbars: 'custom',
         fadeScrollbars: true,
         shrinkScrollbars: 'scale',
-        tap: true,
-        click: true
+        click: true,
+        tap: true
     });
 
     if (document.querySelector(".bottom-modal-scroll")) {
@@ -36,8 +36,8 @@ function loaded() {
             scrollbars: 'custom',
             fadeScrollbars: true,
             shrinkScrollbars: 'scale',
-            tap: true,
-            click: true
+            click: true,
+            tap: true
         });
     }
 
@@ -62,7 +62,7 @@ var roleTab = new Swiper('#role-tab', {
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     onTap: function() {
-        roleImage.slideTo(roleTab.tapedIndex)
+        roleImage.slideTo(roleTab.clickedIndex)
     }
 });
 
@@ -92,18 +92,6 @@ roleTab.params.control = [roleInfo];
 
 roleImage.params.control = [roleTab];
 
-// switchery
-// var elems = Array.prototype.slice.call(document.querySelectorAll('.switch'));
-//
-// elems.forEach(function(html) {
-//     var switchery = new Switchery(html, {
-//         className: 'switch',
-//         color: '#53c7c6',
-//         secondaryColor: '#f5f6f7',
-//         jackColor: '#ffffff',
-//         jackSecondaryColor: '#ffffff'
-//     });
-// });
 
 // waves
 Waves.displayEffect();
@@ -148,16 +136,16 @@ jQuery(document).ready(function($) {
 
     // swiper tab
     $(".tabbar-swiper .item").on('tap', function(e) {
-        e.preventDefault()
-        $(".tabbar-swiper .active").removeClass('active')
-        $(this).addClass('active')
-        tabbarSwiperContainer.slideTo($(this).index())
+        e.preventDefault();
+        $(".tabbar-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        tabbarSwiperContainer.slideTo($(this).index());
     });
 
     var tabbarSwiperContainer = new Swiper('.tabbar-swiper-container', {
         autoHeight: true,
         onSlideChangeStart: function() {
-            $('.tabbar-swiper .active').removeClass('active')
+            $('.tabbar-swiper .active').removeClass('active');
             $('.tabbar-swiper .item').eq(tabbarSwiperContainer.activeIndex).addClass('active');
         }
     });
@@ -168,31 +156,28 @@ jQuery(document).ready(function($) {
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
         onTap: function() {
-            tabbarOverflowSwiperContainer.slideTo(tabbarOverflowSwiper.tapedIndex)
+            tabbarOverflowSwiperContainer.slideTo(tabbarOverflowSwiper.clickedIndex);
         }
-    })
+    });
 
     var tabbarOverflowSwiperContainer = new Swiper('.tabbar-overflow-swiper-container', {
         onSlideChangeStart: function() {
-            updateNavPosition()
+            updateNavPosition();
         }
-    })
+    });
 
     function updateNavPosition() {
         $('.tabbar-overflow-swiper .active').removeClass('active')
         var activeNav = $('.tabbar-overflow-swiper .swiper-slide').eq(tabbarOverflowSwiperContainer.activeIndex).addClass('active');
         if (!activeNav.hasClass('swiper-slide-visible')) {
-            console.log(1);
             if (activeNav.index() > tabbarOverflowSwiper.activeIndex) {
-                console.log(2);
                 var thumbsPerNav = Math.floor(tabbarOverflowSwiper.width / activeNav.width()) - 1
                 tabbarOverflowSwiper.slideTo(activeNav.index() - thumbsPerNav)
             } else {
-                console.log(3);
                 tabbarOverflowSwiper.slideTo(activeNav.index())
             }
         }
-    }
+    };
 
     // 链接嵌套 fix
     $('.list-button-group .button').on("tap", function(e) {
