@@ -2735,6 +2735,10 @@ button.swiper-pagination-bullet {
   display: flex;
 }
 
+.list-card-button-group .button {
+  border-width: 1px;
+}
+
 .list-card-button-group-right .button {
   margin-left: 10px;
 }
