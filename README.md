@@ -9,6 +9,12 @@
 
 ## Update
 
+### 2017-3-22
+
+- 完成员工端页面
+- 结构优化
+- 处理radio在iScroll内无法点击等问题
+
 ### 2017-3-20
 
 - 解决body拖拽/滑屏/border.5px/点击穿透/链接跳转等问题
@@ -31,7 +37,6 @@
 - [滑动(tab/slide) - swiper 3.3.1](http://idangero.us/swiper/)
 - [图片延迟加载 - lazyload 1.9.3](http://www.appelsiini.net/projects/lazyload)
 - [模态窗口 - ModalWindowEffects 1.0.0](https://github.com/codrops/ModalWindowEffects)
-- [单选复选框 - iCheck 1.0.2](http://www.bootcss.com/p/icheck/)
 
 [⬆ back to top](#readme)
 
@@ -52,6 +57,9 @@
 - 员工端-顾客 `2-customer.html`
 - 员工端-顾客信息 `2-customer-content.html`
 - 员工端-顾客信息-编辑 `2-customer-edit.html`
+- 员工端-顾客信息-标签管理 `2-customer-label.html`
+- 员工端-顾客信息-创建群组-顾问 `2-group-build-1.html`
+- 员工端-顾客信息-创建群组-主诊&医助 `2-group-build-2.html`
 - 员工端-群组 `2-group.html`
 - 员工端-群组信息 `2-group-content.html`
 - 员工端-我 `2-user.html`

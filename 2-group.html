@@ -18,48 +18,46 @@
 
 
 <body onload="loaded()">
-    <!-- tab start -->
-    <nav class="tabbar">
-        <a class="active" href="2-group.html">活跃</a>
-        <a href="#">不活跃</a>
-        <a href="#">休眠</a>
-    </nav>
-    <!-- tab over -->
+    <!-- header start -->
+    <header class="tabbar">
+        <a class="item active" href="2-group.html">活跃</a>
+        <a class="item" href="#">不活跃</a>
+        <a class="item" href="#">休眠</a>
+    </header>
+    <!-- header over -->
+    <!-- search start -->
+    <header class="searchbar">
+        <form action="">
+            <i class="icon-search"></i>
+            <input class="search" type="search" placeholder="搜索">
+        </form>
+    </header>
+    <!-- search over -->
     <!-- footer start -->
-    <footer class="footer">
-        <nav class="navbar">
-            <a class="" href="2-chat.html">
-                <i class="icon-chat-2"></i>
-                <span class="badge">8</span>
-                <p>聊天</p>
-            </a>
-            <a class="" href="2-customer.html">
-                <i class="icon-user-book"></i>
-                <p>顾客</p>
-            </a>
-            <a class="active" href="2-group.html">
-                <i class="icon-group"></i>
-                <p>群组</p>
-            </a>
-            <a class="" href="2-user.html">
-                <i class="icon-user"></i>
-                <p>我</p>
-            </a>
-        </nav>
+    <footer class="navbar">
+        <a class="" href="2-chat.html">
+            <i class="icon-chat-2"></i>
+            <span class="badge">8</span>
+            <p>聊天</p>
+        </a>
+        <a class="" href="2-customer.html">
+            <i class="icon-user-book"></i>
+            <p>顾客</p>
+        </a>
+        <a class="active" href="2-group.html">
+            <i class="icon-group"></i>
+            <p>群组</p>
+        </a>
+        <a class="" href="2-user.html">
+            <i class="icon-user"></i>
+            <p>我</p>
+        </a>
     </footer>
-    <!-- footer over -->
 
+    <!-- footer over -->
     <!-- main start -->
     <div class="main">
         <div class="scroller">
-            <!-- search start -->
-            <div class="searchbar">
-                <form action="">
-                    <i class="icon-search"></i>
-                    <input class="search" type="search" placeholder="搜索">
-                </form>
-            </div>
-            <!-- search over -->
             <!-- group start -->
             <div class="list">
                 <div class="divder">A</div>
@@ -71,7 +69,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -91,7 +89,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -111,7 +109,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -136,7 +134,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -156,7 +154,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -176,7 +174,7 @@
                     <div class="row">
                         <div class="column">
                             <p>李先生 138****8888</p>
-                            <div class="label-group">
+                            <div class="list-label-group">
                                 <span class="label label-mini label-round label-outline label-outline-gray left-icon"><i class="icon-fire"></i>活跃</span>
                             </div>
                         </div>
@@ -199,8 +197,7 @@
     <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
-    <script type="text/javascript" src="js/iCheck/icheck.min.js"></script>
-    <script type="text/javascript" src="js/switchery/switchery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/switchery/switchery.min.js"></script> -->
     <script type="text/javascript" src="js/modalEffects/classie.js"></script>
     <script type="text/javascript" src="js/modalEffects/modalEffects.js"></script>
     <script type="text/javascript" src="js/waves/waves.min.js"></script>

@@ -564,7 +564,7 @@ function selectC(p, c) {
             areaExpress += sCity + " ";
         }
     }
-    $("#area-back").attr("onClick", "selectP(" + p + ");");
+    $("#area-back").attr("ontap", "selectP(" + p + ");");
     bottomModalScroll.refresh();
 }
 
@@ -576,10 +576,6 @@ function selectD(p, c, d) {
     $("#area-select p").html(areaExpress);
     bottomModalScroll.refresh();
 }
-
-// $('#area-back').click(function() {
-//     bottomModalScroll.refresh();
-// });
 
 /*关闭省市区选项*/
 function clockArea() {

@@ -27,6 +27,7 @@ function loaded() {
         scrollbars: 'custom',
         fadeScrollbars: true,
         shrinkScrollbars: 'scale',
+        tap: true,
         click: true
     });
 
@@ -35,6 +36,7 @@ function loaded() {
             scrollbars: 'custom',
             fadeScrollbars: true,
             shrinkScrollbars: 'scale',
+            tap: true,
             click: true
         });
     }
@@ -56,11 +58,11 @@ var roleTab = new Swiper('#role-tab', {
     setWrapperSize: true,
     initialSlide: 1,
     onlyExternal: true,
-    slideToClickedSlide: true,
+    slideTotapedSlide: true,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     onTap: function() {
-        roleImage.slideTo(roleTab.clickedIndex)
+        roleImage.slideTo(roleTab.tapedIndex)
     }
 });
 
@@ -76,7 +78,7 @@ var roleImage = new Swiper('#role-image', {
     slidesPerView: 'auto',
     centeredSlides: true,
     initialSlide: 1,
-    slideToClickedSlide: true,
+    slideTotapedSlide: true,
     lazyLoading: true,
     lazyLoadingInPrevNext: true
 });
@@ -91,42 +93,52 @@ roleTab.params.control = [roleInfo];
 roleImage.params.control = [roleTab];
 
 // switchery
-var elems = Array.prototype.slice.call(document.querySelectorAll('.switch'));
-
-elems.forEach(function(html) {
-    var switchery = new Switchery(html, {
-        className: 'switch',
-        color: '#53c7c6',
-        secondaryColor: '#f5f6f7',
-        jackColor: '#ffffff',
-        jackSecondaryColor: '#ffffff'
-    });
-});
+// var elems = Array.prototype.slice.call(document.querySelectorAll('.switch'));
+//
+// elems.forEach(function(html) {
+//     var switchery = new Switchery(html, {
+//         className: 'switch',
+//         color: '#53c7c6',
+//         secondaryColor: '#f5f6f7',
+//         jackColor: '#ffffff',
+//         jackSecondaryColor: '#ffffff'
+//     });
+// });
 
 // waves
 Waves.displayEffect();
 
 // delayed spik
 function delayedSpik() {
+
+    // var href = [];
+    // $("body").find("a.waves-effect").each(function(i) {
+    //     href[i] = $(this).attr("href");
+    //     $(this).attr("href", "javascript:;");
+    //     $(this).bind("tap", function() {
+    //         window.setTimeout(function() {
+    //             location.href = href[i];
+    //         }, 300);
+    //     });
+    // });
+
     var href = [];
-    $("body").find("a.waves-effect").each(function(i) {
-        href[i] = $(this).attr("href");
-        $(this).attr("href", "javascript:;");
-        $(this).bind("click", function() {
-            window.setTimeout(function() {
+
+    $("[data-href]").each(function(i) {
+        href[i] = $(this).data('href');
+        if ($(this).hasClass('waves-effect')) {
+            $(this).bind("tap", function() {
+                window.setTimeout(function() {
+                    location.href = href[i];
+                }, 300);
+            });
+        } else {
+            $(this).bind("tap", function() {
                 location.href = href[i];
-            }, 300);
-        });
+            });
+        }
     });
-    var dataHref = [];
-    $("div.waves-effect").each(function(i) {
-        dataHref[i] = $(this).data('href');
-        $(this).bind("click", function() {
-            window.setTimeout(function() {
-                location.href = dataHref[i];
-            }, 300);
-        });
-    });
+
 };
 
 delayedSpik();
@@ -134,8 +146,56 @@ delayedSpik();
 // jQuery
 jQuery(document).ready(function($) {
 
+    // swiper tab
+    $(".tabbar-swiper .item").on('tap', function(e) {
+        e.preventDefault()
+        $(".tabbar-swiper .active").removeClass('active')
+        $(this).addClass('active')
+        tabbarSwiperContainer.slideTo($(this).index())
+    });
+
+    var tabbarSwiperContainer = new Swiper('.tabbar-swiper-container', {
+        autoHeight: true,
+        onSlideChangeStart: function() {
+            $('.tabbar-swiper .active').removeClass('active')
+            $('.tabbar-swiper .item').eq(tabbarSwiperContainer.activeIndex).addClass('active');
+        }
+    });
+
+    // swiper overflow tab
+    var tabbarOverflowSwiper = new Swiper('.tabbar-overflow-swiper', {
+        slidesPerView: 3,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        onTap: function() {
+            tabbarOverflowSwiperContainer.slideTo(tabbarOverflowSwiper.tapedIndex)
+        }
+    })
+
+    var tabbarOverflowSwiperContainer = new Swiper('.tabbar-overflow-swiper-container', {
+        onSlideChangeStart: function() {
+            updateNavPosition()
+        }
+    })
+
+    function updateNavPosition() {
+        $('.tabbar-overflow-swiper .active').removeClass('active')
+        var activeNav = $('.tabbar-overflow-swiper .swiper-slide').eq(tabbarOverflowSwiperContainer.activeIndex).addClass('active');
+        if (!activeNav.hasClass('swiper-slide-visible')) {
+            console.log(1);
+            if (activeNav.index() > tabbarOverflowSwiper.activeIndex) {
+                console.log(2);
+                var thumbsPerNav = Math.floor(tabbarOverflowSwiper.width / activeNav.width()) - 1
+                tabbarOverflowSwiper.slideTo(activeNav.index() - thumbsPerNav)
+            } else {
+                console.log(3);
+                tabbarOverflowSwiper.slideTo(activeNav.index())
+            }
+        }
+    }
+
     // 链接嵌套 fix
-    $('.list-button-group .button').on("click", function(e) {
+    $('.list-button-group .button').on("tap", function(e) {
         e.stopPropagation();
     });
 
@@ -148,7 +208,7 @@ jQuery(document).ready(function($) {
     })
 
     // button
-    $('.button').click(function() {
+    $('.button').on('tap', function() {
         $(this).removeClass('active').addClass('active');
         var set = setTimeout(function() {
             $('.button').removeClass('active');
@@ -156,11 +216,19 @@ jQuery(document).ready(function($) {
     });
 
     // button wave
-    $('.button-wave').click(function() {
+    $('.button-wave').on("tap", function() {
         $(this).removeClass('wave').addClass('wave');
         var set = setTimeout(function() {
             $('.button-wave').removeClass('wave');
         }, 500)
+    });
+
+    // label
+    $('.label-cancel').on('tap', function() {
+        $(this).removeClass('active').addClass('active');
+        var set = setTimeout(function() {
+            $('.label-cancel').removeClass('active');
+        }, 100)
     });
 
     // image lazyload
@@ -170,10 +238,10 @@ jQuery(document).ready(function($) {
         effect: 'fadeIn'
     });
 
-    // radio-checkbox
-    $('.radio-checkbox').iCheck({
-        checkboxClass: 'checkbox',
-        radioClass: 'radio',
+    // radio
+    $('label.item').on('tap', function() {
+        $(this).siblings(':radio').prop('checked', false);
+        $(this).find(':radio').prop('checked', true);
     });
 
     // fly
@@ -191,7 +259,7 @@ jQuery(document).ready(function($) {
     window.onresize = function() {
         offset = resetOffset(offset);
     }
-    $(".add-cart").click(function(event) {
+    $(".add-cart").on('tap', function(event) {
         var flag = false;
         var addCart = $(this);
         var flyer = $('<div class="flyer"></div>');

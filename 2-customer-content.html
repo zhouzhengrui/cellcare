@@ -19,7 +19,7 @@
 
 <body onload="loaded()">
     <!-- main start -->
-    <div class="main gray">
+    <div class="main main-gray">
         <div class="scroller">
             <!-- panel start -->
             <div class="panel-customer">
@@ -48,53 +48,67 @@
                         </div>
                     </div>
                     <div class="panel-button-group panel-button-group-right">
-                        <a href="#" class="button button-round button-round-large button-outline button-wave button-wave-light">
+                        <buttom data-href="#" class="button button-round button-round-large button-outline button-wave button-wave-light">
                             <span class="button-inner"><i class="icon-message"></i></span>
-                        </a>
-                        <a href="tel:" class="button button-round button-round-large button-outline button-wave button-wave-light">
+                        </buttom>
+                        <buttom data-href="tel:10086" class="button button-round button-round-large button-outline button-wave button-wave-light">
                             <span class="button-inner"><i class="icon-telephone"></i></span>
-                        </a>
+                        </buttom>
                     </div>
                 </div>
             </div>
             <!-- panel over -->
             <!-- label start -->
-            <div class="label-manage">
-                <!-- 标签按员工角色分配颜色, 红-客户经理, 黄-方案专家, 蓝-专家助理 -->
-                <span class="label label-small label-round label-outline label-outline-red">沉鱼落雁</span>
-                <span class="label label-small label-round label-outline label-outline-yellow">闭月羞花</span>
-                <span class="label label-small label-round label-outline label-outline-blue">眉目如画</span>
+            <div class="label-group">
+                <!-- 标签按员工角色分配颜色, 红-顾问, 黄-主诊, 蓝-医助 -->
+                <span class="label label-mini label-round label-outline label-outline-red">沉鱼落雁</span>
+                <span class="label label-mini label-round label-outline label-outline-yellow">闭月羞花</span>
+                <span class="label label-mini label-round label-outline label-outline-blue">眉目如画</span>
             </div>
             <!-- label over -->
             <!-- list start -->
             <div class="list list-border">
                 <!-- item start -->
-                <a href="2-group-build.html" class="item waves-effect arrow-right">
+                <div data-href="2-group-content.html" class="item waves-effect arrow-right">
                     <div class="row">
-                        <label class="label"><i class="icon-group"></i>创建群组</label>
+                        <label class="label"><i class="icon-group"></i>群组信息</label>
                     </div>
-                </a>
+                </div>
                 <!-- item over -->
                 <!-- item start -->
-                <a href="#" class="item waves-effect arrow-right">
+                <div data-href="2-group-build-1.html" class="item waves-effect arrow-right">
+                    <div class="row">
+                        <label class="label"><i class="icon-group"></i>创建群组 (顾问)</label>
+                    </div>
+                </div>
+                <!-- item over -->
+                <!-- item start -->
+                <div data-href="2-group-build-2.html" class="item waves-effect arrow-right">
+                    <div class="row">
+                        <label class="label"><i class="icon-group"></i>创建群组 (主诊&医助)</label>
+                    </div>
+                </div>
+                <!-- item over -->
+                <!-- item start -->
+                <div data-href="#" class="item waves-effect arrow-right">
                     <div class="row">
                         <label class="label"><i class="icon-chat-3"></i>聊天记录</label>
                     </div>
-                </a>
+                </div>
                 <!-- item over -->
                 <!-- item start -->
-                <a href="2-customer-label.html" class="item waves-effect arrow-right">
+                <div data-href="2-customer-label.html" class="item waves-effect arrow-right">
                     <div class="row">
                         <label class="label"><i class="icon-label"></i>标签管理</label>
                     </div>
-                </a>
+                </div>
                 <!-- item over -->
                 <!-- item start -->
-                <a href="2-customer-edit.html" class="item waves-effect arrow-right">
+                <div data-href="2-customer-edit.html" class="item waves-effect arrow-right">
                     <div class="row">
                         <label class="label"><i class="icon-pen"></i>顾客信息编辑</label>
                     </div>
-                </a>
+                </div>
                 <!-- item over -->
             </div>
             <!-- list over -->
@@ -162,8 +176,7 @@
     <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
-    <script type="text/javascript" src="js/iCheck/icheck.min.js"></script>
-    <script type="text/javascript" src="js/switchery/switchery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/switchery/switchery.min.js"></script> -->
     <script type="text/javascript" src="js/modalEffects/classie.js"></script>
     <script type="text/javascript" src="js/modalEffects/modalEffects.js"></script>
     <script type="text/javascript" src="js/waves/waves.min.js"></script>
