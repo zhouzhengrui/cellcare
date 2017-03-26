@@ -282,17 +282,6 @@
             chatScroll.scrollToElement(document.querySelector('#last'), 0, null, null, null);
         };
 
-        // keyboard fix
-        $(function() {
-            var timer = null;
-            $('input.chatbar-text').focus(function() {
-                var target = this;
-                setInterval(function() {
-                    target.scrollIntoView(true);
-                }, 100);
-            })
-        });
-
     </script>
 
 </body>
