@@ -287,7 +287,10 @@
                 setInterval(function() {
                     target.scrollIntoView(true);
                 }, 100);
-                chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, null);
+                setTimeout(function() {
+                    chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, null);
+                }, 300);
+
             });
 
         };
