@@ -10,6 +10,10 @@
 
 ## Update
 
+### 2017-3-26
+
+- 上传聊天和聊天记录页面
+
 ### 2017-3-22
 
 - 完成员工端页面
@@ -38,6 +42,7 @@
 - [滑动(tab/slide) - swiper 3.3.1](http://idangero.us/swiper/)
 - [图片延迟加载 - lazyload 1.9.3](http://www.appelsiini.net/projects/lazyload)
 - [模态窗口 - ModalWindowEffects 1.0.0](https://github.com/codrops/ModalWindowEffects)
+- [图片浏览器 - PhotoSwipe 4.1.1](http://photoswipe.com)
 
 [⬆ back to top](#readme)
 
@@ -55,6 +60,8 @@
 - 客户端-附近门店 `1-store.html`
 
 - 员工端-聊天 `2-chat.html`
+- 员工端-聊天内容 `2-chat-content.html`
+- 员工端-聊天记录 `2-chat-history.html`
 - 员工端-顾客 `2-customer.html`
 - 员工端-顾客信息 `2-customer-content.html`
 - 员工端-顾客信息-编辑 `2-customer-edit.html`
