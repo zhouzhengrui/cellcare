@@ -268,8 +268,9 @@
 
     <script type="text/javascript">
 
-        // iScroll
         function loaded() {
+
+            // iScroll
             var chatScroll;
             chatScroll = new IScroll('.chat-main', {
                 scrollbars: 'custom',
@@ -278,19 +279,18 @@
                 click: true
             });
             chatScroll.scrollToElement(document.querySelector('#last'), 0, null, null, null);
-        };
 
-        // keyboard fix
-        $(function() {
+            // keyboard fix
             var timer = null;
             $('input.chatbar-text').focus(function() {
                 var target = this;
                 setInterval(function() {
                     target.scrollIntoView(true);
                 }, 100);
-                chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, true);
-            })
-        });
+                chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, null);
+            });
+
+        };
 
     </script>
 
