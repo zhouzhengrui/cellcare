@@ -3814,6 +3814,42 @@ footer.chatbar button.chatbar-button i {
   font-size: 22px;
 }
 
+footer.chatbar .chatbar-input {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  margin-right: 7px;
+  padding: 0 8px;
+  color: #aaaaaa;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+footer.chatbar .chatbar-input input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+footer.chatbar .chatbar-input i {
+  font-size: 22px;
+}
+
 footer.chatbar ~ .chat-main {
   margin-bottom: 50px;
 }
@@ -7629,6 +7665,9 @@ section.panel .info .number {
   .ios-8 footer.chatbar button.chatbar-button {
     border-width: .5px;
   }
+  .ios-8 footer.chatbar .chatbar-input {
+    border-width: .5px;
+  }
   .ios-8 .iScrollVerticalScrollbar {
     width: 2.5px;
   }
@@ -7732,6 +7771,9 @@ section.panel .info .number {
     border-width: .33px;
   }
   .ios-8 footer.chatbar button.chatbar-button {
+    border-width: .33px;
+  }
+  .ios-8 footer.chatbar .chatbar-input {
     border-width: .33px;
   }
   .ios-8 .tabbar:before {
