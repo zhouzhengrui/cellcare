@@ -3942,6 +3942,15 @@ footer.chatbar ~ .chat-main {
   font-size: 20px;
 }
 
+.chat-message .message .senting {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+}
+
 .chat-message .me {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
