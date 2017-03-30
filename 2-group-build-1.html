@@ -75,7 +75,7 @@
         <button class="button button-block button-red waves-effect waves-light md-trigger" data-modal="modal-1">
             <span class="button-inner">解散群组</span>
         </button>
-        <button class="button button-block waves-effect waves-light">
+        <button class="button button-block waves-effect waves-light" id="demo-toast">
             <span class="button-inner">提交</span>
         </button>
     </footer>
@@ -218,6 +218,18 @@
     <div class="md-overlay"></div>
     <!-- modal over -->
 
+    <!-- toast start -->
+    <div class="toast">
+        <p>Toast是一个微妙的通知, 出现在应用程序的内容之上</p>
+    </div>
+    <div class="toast toast-top align-center">
+        <p>Toast顶部显示, 内容居中</p>
+    </div>
+    <div class="toast toast-bottom">
+        <p>Toast底部显示</p>
+    </div>
+    <!-- toast over -->
+
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/iscroll/iscroll-probe.js"></script>
@@ -231,6 +243,18 @@
     <script type="text/javascript" src="js/photoSwipe/photoswipe-ui-default.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
+
+
+    <!-- demo start -->
+    <script type="text/javascript">
+        $('#demo-toast').on('click', function() {
+            $('.toast').addClass('show');
+            setTimeout(function() {
+                $('.toast').removeClass('show');
+            }, 3000);
+        });
+    </script>
+    <!-- demo over -->
 
 </body>
 

@@ -547,6 +547,67 @@ span.label-translucent {
   background-color: #E74C3C;
 }
 
+.toast {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  padding: 15px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.95) translateY(-50%);
+  -ms-transform: scale(0.95) translateY(-50%);
+  transform: scale(0.95) translateY(-50%);
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1) translateY(-50%);
+  -ms-transform: scale(1) translateY(-50%);
+  transform: scale(1) translateY(-50%);
+}
+
+.toast.toast-top {
+  top: 0;
+  opacity: 1;
+  -webkit-transform: scale(1) translateY(-100%);
+  -ms-transform: scale(1) translateY(-100%);
+  transform: scale(1) translateY(-100%);
+}
+
+.toast.toast-top.show {
+  top: 15px;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+}
+
+.toast.toast-bottom {
+  top: auto;
+  bottom: 0;
+  opacity: 1;
+  -webkit-transform: scale(1) translateY(100%);
+  -ms-transform: scale(1) translateY(100%);
+  transform: scale(1) translateY(100%);
+}
+
+.toast.toast-bottom.show {
+  bottom: 15px;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+}
+
 .preloader {
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
