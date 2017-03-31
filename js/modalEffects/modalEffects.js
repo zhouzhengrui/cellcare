@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -16,19 +16,24 @@ var ModalEffects = (function() {
 
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
-			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
-				close = modal.querySelector( '.md-close' );
-
+			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) );
+			//循环给所有md-clode增加关闭监听
+			modal.querySelectorAll( '.md-close' ).forEach( function(j) {
+					j.addEventListener( 'click', function(ev) {
+						ev.stopPropagation();
+						removeModalHandler();
+					});
+			});
 			function removeModal( hasPerspective ) {
-				classie.remove( modal, 'md-show' );
-
+					classie.remove( modal, 'md-show' );
 				if( hasPerspective ) {
 					classie.remove( document.documentElement, 'md-perspective' );
 				}
+
 			}
 
 			function removeModalHandler() {
-				removeModal( classie.has( el, 'md-setperspective' ) ); 
+				removeModal( classie.has( el, 'md-setperspective' ) );
 			}
 
 			el.addEventListener( 'click', function( ev ) {
@@ -43,10 +48,11 @@ var ModalEffects = (function() {
 				}
 			});
 
-			close.addEventListener( 'click', function( ev ) {
+			/*close.addEventListener( 'click', function( ev ) {
 				ev.stopPropagation();
 				removeModalHandler();
-			});
+			});*/
+
 
 		} );
 

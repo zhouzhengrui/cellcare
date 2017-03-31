@@ -216,6 +216,26 @@
                 </div>
                 <!-- item over -->
                 <!-- item start -->
+                <div class="item">
+                    <div class="avatar">
+                        <img src="http://img.la/40x40" alt="">
+                    </div>
+                    <div class="message">
+                        <p>Thisisacontinuousletterusedtotestthelongword</p>
+                    </div>
+                </div>
+                <!-- item over -->
+                <!-- item start -->
+                <div class="item me">
+                    <div class="avatar">
+                        <img src="http://img.la/40x40" alt="">
+                    </div>
+                    <div class="message">
+                        <p>超链接 <a data-href="http://baidu.com">https://github.com/zhouzhengrui/</a></p>
+                    </div>
+                </div>
+                <!-- item over -->
+                <!-- item start -->
                 <div class="item me" id="last">
                     <div class="avatar">
                         <img src="http://img.la/40x40" alt="">
@@ -307,7 +327,15 @@
                 setTimeout(function() {
                     chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, null);
                 }, 300);
+            });
 
+            // href fix
+            var href = [];
+            $("[data-href]").each(function(i) {
+                href[i] = $(this).data('href');
+                $(this).bind("click", function() {
+                    location.href = href[i];
+                });
             });
 
         };

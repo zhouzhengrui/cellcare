@@ -36,8 +36,7 @@ function loaded() {
             scrollbars: 'custom',
             fadeScrollbars: true,
             shrinkScrollbars: 'scale',
-            click: true,
-            tap: true
+            click: true
         });
     }
 
@@ -92,7 +91,6 @@ roleTab.params.control = [roleInfo];
 
 roleImage.params.control = [roleTab];
 
-
 // waves
 Waves.displayEffect();
 
@@ -111,7 +109,6 @@ function delayedSpik() {
     // });
 
     var href = [];
-
     $("[data-href]").each(function(i) {
         href[i] = $(this).data('href');
         if ($(this).hasClass('waves-effect')) {
@@ -275,6 +272,20 @@ var photoSwipe = function(gallerySelector) {
     }
 };
 photoSwipe('.photo-swipe');
+
+// toast
+// function toast(message, position, duration) {
+//     duration = duration || 3000;
+//     duration = isNaN(duration) ? 3000 : duration;
+//     var m = '<div class="toast '+align+'">'+message+'</div>';
+//     m.innerHTML = message;
+//     document.body.appendChild(m);
+//     setTimeout(function () {
+//         var d = 0.5;
+//         setTimeout(function () { document.body.removeChild(m) }, d * 3000);
+//     }, duration);
+// }
+
 
 // jQuery
 jQuery(document).ready(function($) {
