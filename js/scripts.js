@@ -274,18 +274,33 @@ var photoSwipe = function(gallerySelector) {
 photoSwipe('.photo-swipe');
 
 // toast
-// function toast(message, position, duration) {
-//     duration = duration || 3000;
-//     duration = isNaN(duration) ? 3000 : duration;
-//     var m = '<div class="toast '+align+'">'+message+'</div>';
-//     m.innerHTML = message;
-//     document.body.appendChild(m);
-//     setTimeout(function () {
-//         var d = 0.5;
-//         setTimeout(function () { document.body.removeChild(m) }, d * 3000);
-//     }, duration);
-// }
-
+function toast(message, duration, position, align) {
+    if (typeof(position) != "undefined" && position != "") {
+        position = "toast-" + position;
+    } else {
+        position = "";
+    }
+    if (typeof(align) != "undefined" && align != "") {
+        align = "align-" + align;
+    } else {
+        align = "";
+    }
+    duration = duration || 3000;
+    duration = isNaN(duration) ? 3000 : duration;
+    var m = document.createElement('div');
+    m.setAttribute("class", "toast " + position + " " + align);
+    m.innerHTML = message;
+    document.body.appendChild(m);
+    setTimeout(function() {
+        m.setAttribute("class", "toast show " + position + " " + align);
+        setTimeout(function() {
+            m.setAttribute("class", "toast  " + position + " " + align);
+            setTimeout(function() {
+                document.body.removeChild(m);
+            }, 300);
+        }, duration);
+    }, 100);
+}
 
 // jQuery
 jQuery(document).ready(function($) {

@@ -10,54 +10,55 @@
  */
 var ModalEffects = (function() {
 
-	function init() {
+    function init() {
 
-		var overlay = document.querySelector( '.md-overlay' );
+        var overlay = document.querySelector('.md-overlay');
 
-		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
+        [].slice.call(document.querySelectorAll('.md-trigger')).forEach(function(el, i) {
 
-			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) );
-			//循环给所有md-clode增加关闭监听
-			modal.querySelectorAll( '.md-close' ).forEach( function(j) {
-					j.addEventListener( 'click', function(ev) {
-						ev.stopPropagation();
-						removeModalHandler();
-					});
-			});
-			function removeModal( hasPerspective ) {
-					classie.remove( modal, 'md-show' );
-				if( hasPerspective ) {
-					classie.remove( document.documentElement, 'md-perspective' );
-				}
-
-			}
-
-			function removeModalHandler() {
-				removeModal( classie.has( el, 'md-setperspective' ) );
-			}
-
-			el.addEventListener( 'click', function( ev ) {
-				classie.add( modal, 'md-show' );
-				overlay.removeEventListener( 'click', removeModalHandler );
-				overlay.addEventListener( 'click', removeModalHandler );
-
-				if( classie.has( el, 'md-setperspective' ) ) {
-					setTimeout( function() {
-						classie.add( document.documentElement, 'md-perspective' );
-					}, 25 );
-				}
-			});
-
-			/*close.addEventListener( 'click', function( ev ) {
-				ev.stopPropagation();
-				removeModalHandler();
-			});*/
+            var modal = document.querySelector('#' + el.getAttribute('data-modal'));
+            // close = modal.querySelector( '.md-close' );
+            [].slice.call(modal.querySelectorAll('.md-close')).forEach(function(j, m) {
+                j.addEventListener('click', function(ev) {
+                    ev.stopPropagation();
+                    removeModalHandler();
+                });
+            });
 
 
-		} );
+            function removeModal(hasPerspective) {
+                classie.remove(modal, 'md-show');
 
-	}
+                if (hasPerspective) {
+                    classie.remove(document.documentElement, 'md-perspective');
+                }
+            }
 
-	init();
+            function removeModalHandler() {
+                removeModal(classie.has(el, 'md-setperspective'));
+            }
+
+            el.addEventListener('click', function(ev) {
+                classie.add(modal, 'md-show');
+                overlay.removeEventListener('click', removeModalHandler);
+                overlay.addEventListener('click', removeModalHandler);
+
+                if (classie.has(el, 'md-setperspective')) {
+                    setTimeout(function() {
+                        classie.add(document.documentElement, 'md-perspective');
+                    }, 25);
+                }
+            });
+
+            // close.addEventListener( 'click', function( ev ) {
+            // 	ev.stopPropagation();
+            // 	removeModalHandler();
+            // });
+
+        });
+
+    }
+
+    init();
 
 })();

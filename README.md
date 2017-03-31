@@ -10,6 +10,10 @@
 
 ## Update
 
+### 2017-4-1
+
+- 新增日期控件, 优化toast功能, 已知bug修复
+
 ### 2017-3-26
 
 - 上传聊天和聊天记录页面
@@ -43,6 +47,7 @@
 - [图片延迟加载 - lazyload 1.9.3](http://www.appelsiini.net/projects/lazyload)
 - [模态窗口 - ModalWindowEffects 1.0.0](https://github.com/codrops/ModalWindowEffects)
 - [图片浏览器 - PhotoSwipe 4.1.1](http://photoswipe.com)
+- [选择器(date/select) - mobiscroll 2.17.1](https://docs.mobiscroll.com/2-17-1/jquery/getting-started)
 
 [⬆ back to top](#readme)
 

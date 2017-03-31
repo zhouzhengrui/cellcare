@@ -218,24 +218,11 @@
     <div class="md-overlay"></div>
     <!-- modal over -->
 
-    <!-- toast start -->
-    <div class="toast">
-        <p>Toast是一个微妙的通知, 出现在应用程序的内容之上</p>
-    </div>
-    <div class="toast toast-top align-center">
-        <p>Toast顶部显示, 内容居中</p>
-    </div>
-    <div class="toast toast-bottom">
-        <p>Toast底部显示</p>
-    </div>
-    <!-- toast over -->
-
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/iscroll/iscroll-probe.js"></script>
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/lazyload/jquery.lazyload.min.js"></script>
-    <!-- <script type="text/javascript" src="js/switchery/switchery.min.js"></script> -->
     <script type="text/javascript" src="js/modalEffects/classie.js"></script>
     <script type="text/javascript" src="js/modalEffects/modalEffects.js"></script>
     <script type="text/javascript" src="js/waves/waves.min.js"></script>
@@ -244,15 +231,14 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
 
-
     <!-- demo start -->
     <script type="text/javascript">
         $('#demo-toast').on('click', function() {
-            // toast("aaaaaa","toast-top",2000)
-            $('.toast').addClass('show');
-            setTimeout(function() {
-                $('.toast').removeClass('show');
-            }, 3000);
+            // 参数1: 消息文本
+            // 参数2: 持续时间, 默认3000毫秒
+            // 参数3: 出现位置, 'top'顶部出现, 'bottom'底部出现, '空'中部出现
+            // 参数4: 文字对齐, 'center'文字居中, '空'文字居左
+            toast('Toast是一个微妙的通知, 出现在应用程序的内容之上', 3000, 'top', 'center');
         });
     </script>
     <!-- demo over -->

@@ -527,6 +527,10 @@ function intProvince() {
     areaList.html(areaCont);
     $("#area-content").scrollTop(0);
     $("#area-back").removeAttr("onClick").hide();
+    bottomModalScroll.refresh();
+    setTimeout(function() {
+        bottomModalScroll.scrollToElement(document.querySelector('#area-list'), 300, null, null, null);
+    }, 100);
 }
 intProvince();
 
@@ -542,6 +546,10 @@ function selectP(p) {
     areaExpress = province[p] + " ";
     $("#area-back").attr("onClick", "intProvince();").show();
     bottomModalScroll.refresh();
+    setTimeout(function() {
+        bottomModalScroll.scrollToElement(document.querySelector('#area-list'), 300, null, null, null);
+    }, 100);
+
 }
 
 /*选择城市*/
@@ -566,6 +574,9 @@ function selectC(p, c) {
     }
     $("#area-back").attr("onClick", "selectP(" + p + ");");
     bottomModalScroll.refresh();
+    setTimeout(function() {
+        bottomModalScroll.scrollToElement(document.querySelector('#area-list'), 300, null, null, null);
+    }, 100);
 }
 
 /*选择区县*/
@@ -575,6 +586,9 @@ function selectD(p, c, d) {
     areaExpress += district[p][c][d];
     $("#area-select p").html(areaExpress);
     bottomModalScroll.refresh();
+    setTimeout(function() {
+        bottomModalScroll.scrollToElement(document.querySelector('#area-list'), 300, null, null, null);
+    }, 100);
 }
 
 /*关闭省市区选项*/

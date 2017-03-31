@@ -6693,11 +6693,12 @@ a.pswp__share--download:hover {
 }
 
 .area-title button.area-back {
-  left: 15px;
+  right: 15px;
+  color: #669933;
 }
 
 .area-title button.area-close {
-  right: 15px;
+  left: 15px;
   color: #aaaaaa;
 }
 
