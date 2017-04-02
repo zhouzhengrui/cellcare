@@ -2553,12 +2553,12 @@ button.swiper-pagination-bullet {
 }
 
 .list select.select {
-  position: absolute;
-  min-height: 48px;
-  right: 0;
-  direction: rtl;
-  text-align: right;
-  z-index: 2;
+  -webkit-box-flex: 1px;
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  margin-right: -35px;
+  background-color: transparent;
 }
 
 .list select.select-left {
@@ -3846,11 +3846,12 @@ footer.chatbar input.chatbar-text {
   border-radius: 4px;
 }
 
-footer.chatbar button.chatbar-send {
+footer.chatbar .chatbar-send {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   height: 35px;
+  line-height: 35px;
   margin-left: 7px;
   padding: 0 15px;
   color: #FFFFFF;

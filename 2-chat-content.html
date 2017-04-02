@@ -24,9 +24,8 @@
             <i class="icon-picture"></i>
             <input type="file">
         </div>
-        <!-- <button class="chatbar-button waves-effect"><i class="icon-picture"></i></button> -->
         <input class="chatbar-text" type="text">
-        <button class="chatbar-send waves-effect waves-light">发送</button>
+        <div class="chatbar-send waves-effect waves-light">发送</div>
     </footer>
     <!-- footer over -->
     <!-- main start -->
@@ -326,6 +325,9 @@
                 setTimeout(function() {
                     chatScroll.scrollToElement(document.querySelector('#last'), 300, null, null, null);
                 }, 300);
+            });
+            $('.chatbar-send').on('touchstart', function() {
+                $('.chatbar-text').val('').focus();
             });
 
             // href fix
