@@ -4058,6 +4058,16 @@ footer.chatbar ~ .chat-main {
   height: 20px;
 }
 
+.chat-message .message-image {
+  line-height: 24px;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.chat-message .message-image figure {
+  margin-top: 8px;
+}
+
 .chat-message .me {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -4084,6 +4094,10 @@ footer.chatbar ~ .chat-main {
   left: auto;
   right: -5px;
   background-color: #a0e75a;
+}
+
+.chat-message .me .message-image figure {
+  margin-top: 0;
 }
 
 .chat-message .chat-date {
