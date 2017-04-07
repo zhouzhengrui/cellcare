@@ -4003,6 +4003,11 @@ footer.chatbar ~ .chat-main {
   padding: 0 2px;
 }
 
+.chat-message .message p.name {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
 .chat-message .message a {
   color: #3498DB;
 }
