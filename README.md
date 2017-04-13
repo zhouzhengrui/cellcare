@@ -8,7 +8,13 @@
 
 <https://zhouzhengrui.github.io/cellcare/2-chat.html> 员工端
 
+<https://zhouzhengrui.github.io/cellcare/3-storemanager.html> 店长应用
+
 ## Update
+
+### 2017-4-13
+
+- 新增店长应用页面
 
 ### 2017-4-1
 
@@ -80,5 +86,9 @@
 - 员工端-我-手机号码 `2-user-phone.html`
 - 员工端-我-擅长 `2-user-begood.html`
 - 员工端-我-简介 `2-user-introduce.html`
+
+- 店长应用 `3-storemanager.html`
+- 店长应用-绑定统计 `3-binding.html`
+- 店长应用-互动统计 `3-interaction.html`
 
 [⬆ back to top](#readme)
