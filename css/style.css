@@ -463,6 +463,11 @@ span.label-outline-red {
   border-color: #E74C3C;
 }
 
+span.label-outline-orange {
+  color: #E67E22;
+  border-color: #E67E22;
+}
+
 span.label-outline-yellow {
   color: #F1C40F;
   border-color: #F1C40F;
@@ -6308,6 +6313,12 @@ a.pswp__share--download:hover {
   text-align: center;
 }
 
+.role-info .store {
+  margin-top: 5px;
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
 .swiper-container-3d .swiper-slide-shadow-left {
   border-radius: 50%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.75)));
@@ -6712,6 +6723,45 @@ a.pswp__share--download:hover {
   font-size: 12px;
 }
 
+.panel-storemanager {
+  position: relative;
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.panel-storemanager .avatar {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto 20px;
+  border-radius: 100%;
+  border: 3px solid #669933;
+  background-color: #FFFFFF;
+}
+
+.panel-storemanager .avatar img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.panel-storemanager .info {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.panel-storemanager .info .name {
+  margin-bottom: 5px;
+}
+
+.panel-storemanager .info .role {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
 .label-group {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7011,6 +7061,134 @@ input[type="radio"]:checked:before {
 
 .explain .small {
   font-size: 12px;
+}
+
+header.statistics {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  padding-left: 80px;
+  padding-right: 15px;
+  background-color: #F5F6F7;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+header.statistics ~ .main {
+  margin-top: 32px;
+}
+
+header.statistics span {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+header.statistics span:last-child {
+  border-right: 1px solid #DDDDDD;
+}
+
+header.statistics-binding-header {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+header.statistics-binding-header span {
+  width: 80px;
+  text-align: center;
+  border-left: 1px solid #DDDDDD;
+}
+
+header.statistics-interaction-header {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+header.statistics-interaction-header span {
+  width: 28%;
+  text-align: center;
+  border-left: 1px solid #DDDDDD;
+}
+
+.statistics-binding {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statistics-binding .statistics-item {
+  width: 80px;
+  text-align: center;
+}
+
+.statistics-binding .orange {
+  color: #E67E22;
+}
+
+.statistics-interaction {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.statistics-interaction .statistics-interaction-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statistics-interaction .statistics-interaction-info .list-label-group span.label {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.statistics-interaction .statistics-interaction-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7px;
+  line-height: 1;
+}
+
+.statistics-interaction .statistics-interaction-divder {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16%;
+  line-height: 14px;
+  border-right: 1px solid #DDDDDD;
+}
+
+.statistics-interaction .statistics-interaction-item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 28%;
+  text-align: center;
+  border-right: 1px solid #DDDDDD;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {

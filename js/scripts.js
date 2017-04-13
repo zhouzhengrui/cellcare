@@ -389,7 +389,7 @@ jQuery(document).ready(function($) {
 
     // image lazyload
     $('img.lazyload').lazyload({
-        container: $('.main'),
+        container: $('.scroller'),
         threshold: 200,
         effect: 'fadeIn'
     });
