@@ -83,17 +83,22 @@
                         <p>专属客服</p>
                         <span>Service</span>
                     </div>
-                </div>
-                <div class="row">
                     <div data-href="1-news.html" class="item waves-effect">
                         <i class="icon-newspaper"></i>
                         <p>医疗资讯</p>
                         <span>News</span>
                     </div>
+                </div>
+                <div class="row">
                     <div data-href="1-store.html" class="item waves-effect">
                         <i class="icon-location"></i>
                         <p>附近门店</p>
                         <span>Store</span>
+                    </div>
+                    <div class="item waves-effect md-trigger" data-modal="modal-unbound">
+                        <i class="icon-unbound"></i>
+                        <p>申请解绑</p>
+                        <span>Unbound</span>
                     </div>
                 </div>
             </div>
@@ -101,6 +106,39 @@
         </div>
      </div>
     <!-- main over -->
+
+    <!-- modal start -->
+    <div class="md-modal md-effect-fade" id="modal-unbound">
+        <div class="md-main">
+            <!-- content start -->
+            <div class="modal-title">
+                <h4 class="title">申请解绑</h4>
+                <button class="md-close"><i class="icon-cancel"></i></button>
+            </div>
+            <div class="modal-content">
+                <div class="list">
+                    <div class="item">
+                        <div class="row">
+                            <div class="input">
+                                <textarea class="textarea" rows="3" placeholder="请输入解绑原因"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-button-group">
+                <button class="button button-block button-clear button-clear-red waves-effect  md-close" id="demo-toast">
+                    <span class="button-inner">提交申请</span>
+                </button>
+                <button class="button button-block button-clear waves-effect md-close">
+                    <span class="button-inner">恕你无罪</span>
+                </button>
+            </div>
+            <!-- content over -->
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    <!-- modal over -->
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -114,6 +152,12 @@
     <script type="text/javascript" src="js/photoSwipe/photoswipe-ui-default.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
+
+    <script type="text/javascript">
+        $('#demo-toast').on('click', function() {
+            toast('提交成功, 我们会尽快处理您的申请', 3000, 'center', 'center');
+        });
+    </script>
 
 </body>
 
