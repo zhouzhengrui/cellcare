@@ -7109,7 +7109,7 @@ header.statistics-binding-header {
 }
 
 header.statistics-binding-header span {
-  width: 80px;
+  width: 60px;
   text-align: center;
   border-left: 1px solid #DDDDDD;
 }
@@ -7135,7 +7135,7 @@ header.statistics-interaction-header span {
 }
 
 .statistics-binding .statistics-item {
-  width: 80px;
+  width: 60px;
   text-align: center;
 }
 
