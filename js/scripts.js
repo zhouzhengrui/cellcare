@@ -27,6 +27,7 @@ function loaded() {
         scrollbars: 'custom',
         fadeScrollbars: true,
         shrinkScrollbars: 'scale',
+        preventDefaultException: { className: /(^|\s)prevent-default-exception(\s|$)/ },
         click: true,
         tap: true
     });
