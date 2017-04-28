@@ -27,7 +27,7 @@ function loaded() {
         scrollbars: 'custom',
         fadeScrollbars: true,
         shrinkScrollbars: 'scale',
-        preventDefaultException: { className: /(^|\s)prevent-default-exception(\s|$)/ },
+        preventDefaultException: {tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|IMG)$/ },
         click: true,
         tap: true
     });
