@@ -260,7 +260,7 @@ footer.navbar {
   border-top: 1px solid #DDDDDD;
 }
 
-footer.navbar a {
+footer.navbar .item {
   -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
@@ -271,11 +271,11 @@ footer.navbar a {
   text-align: center;
 }
 
-footer.navbar a p {
+footer.navbar .item p {
   font-size: 12px;
 }
 
-footer.navbar a i {
+footer.navbar .item i {
   display: block;
   width: 22px;
   height: 22px;
@@ -283,7 +283,7 @@ footer.navbar a i {
   font-size: 22px;
 }
 
-footer.navbar a.active {
+footer.navbar .item.active {
   color: #669933;
 }
 
@@ -333,6 +333,10 @@ footer.button-group .button {
 
 footer.button-group .button:last-child {
   margin-right: 0;
+}
+
+.android .button-group.android-fix {
+  display: none;
 }
 
 .spacing {
@@ -2507,7 +2511,7 @@ button.swiper-pagination-bullet {
 }
 
 .list .list-button-group-right .button {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .list .list-label-group {

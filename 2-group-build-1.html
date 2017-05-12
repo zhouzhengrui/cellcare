@@ -240,6 +240,14 @@
             // 参数4: 文字对齐, 'center'文字居中, '空'文字居左
             toast('Toast是一个微妙的通知, 出现在应用程序的内容之上', 3000, 'top', 'center');
         });
+        $('.android .search').on('focus', function() {
+            $('.android .button-group').addClass('android-fix');
+            $('.android .main').css('margin-bottom', '0');
+        })
+        $('.android .search').on('blur', function() {
+            $('.android .button-group').removeClass('android-fix');
+            $('.android .main').css('margin-bottom', '65px');
+        })
     </script>
     <!-- demo over -->
 

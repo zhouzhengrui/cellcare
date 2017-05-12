@@ -113,7 +113,7 @@ function delayedSpik() {
     $("[data-href]").each(function(i) {
         href[i] = $(this).data('href');
         if ($(this).hasClass('waves-effect')) {
-            $(this).bind("tap", function() {
+            $(this).bind("click", function() {
                 window.setTimeout(function() {
                     location.href = href[i];
                 }, 300);
