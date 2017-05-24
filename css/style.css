@@ -6779,6 +6779,8 @@ a.pswp__share--download:hover {
 }
 
 .label-group {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6790,6 +6792,7 @@ a.pswp__share--download:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
   padding: 0 15px;
   margin-top: 15px;
   margin-bottom: 7px;
@@ -6876,6 +6879,7 @@ a.pswp__share--download:hover {
   -ms-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  width: 100%;
 }
 
 .group-card .role-group .item {
