@@ -6875,10 +6875,11 @@ a.pswp__share--download:hover {
   -ms-flex-align: stretch;
   -webkit-box-align: stretch;
   align-items: stretch;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
 }
 
