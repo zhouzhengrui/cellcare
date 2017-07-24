@@ -320,6 +320,7 @@
 
         // nprogress
         NProgress.start();
+        setTimeout(function() { NProgress.done(); $('.nprogress-fade').removeClass('nprogress-out'); }, 700);
 
         function loaded() {
 
