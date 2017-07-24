@@ -19,19 +19,19 @@
 
 <body onload="loaded()">
     <!-- footer start -->
-    <footer class="chatbar">
+    <footer class="chatbar nprogress-fade nprogress-out">
         <div class="chatbar-input">
             <i class="icon-picture"></i>
             <input type="file">
         </div>
         <div class="chatbar-text">
-            <input type="text">
+            <input type="text" class="chatbar-text-input">
         </div>
         <div class="chatbar-send waves-effect waves-light">发送</div>
     </footer>
     <!-- footer over -->
     <!-- main start -->
-    <div class="chat-main">
+    <div class="chat-main nprogress-fade nprogress-out">
         <div class="scroller">
             <!-- pull-down高度40px, 顶部下拉时出现 -->
             <!-- 下拉大于40px并释放触摸时preloader添加spin类名, 实现图标旋转 -->
@@ -315,7 +315,11 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
 
+    <script type="text/javascript" src="js/nprogress/nprogress.js"></script>
     <script type="text/javascript">
+
+        // nprogress
+        NProgress.start();
 
         function loaded() {
 
@@ -331,7 +335,7 @@
 
             // keyboard fix
             var timer = null;
-            $('input.chatbar-text').focus(function() {
+            $('input.chatbar-text-input').focus(function() {
                 var target = this;
                 setInterval(function() {
                     target.scrollIntoView(true);
@@ -341,7 +345,7 @@
                 }, 300);
             });
             $('.chatbar-send').on('click', function() {
-                $('.chatbar-text').val('').focus();
+                $('input.chatbar-text-input').val('').focus();
             });
 
             // href fix
