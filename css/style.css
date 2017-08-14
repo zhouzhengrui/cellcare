@@ -3852,56 +3852,43 @@ footer.chatbar {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   position: absolute;
   z-index: 2;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 50px;
-  padding: 0 7px;
+  min-height: 50px;
+  padding: 7px;
   background-color: #F5F6F7;
   border-top: 1px solid #DDDDDD;
 }
 
 footer.chatbar .chatbar-text {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-footer.chatbar .chatbar-text input {
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  width: 100%;
-  height: 35px;
-  padding: 0 5px;
+  margin-left: 47px;
+  margin-right: 69px;
+  padding: 5px;
   border: 1px solid #DDDDDD;
   border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+footer.chatbar .chatbar-text .chatbar-text-input {
+  display: block;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
 }
 
 footer.chatbar .chatbar-send {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
   height: 35px;
   line-height: 35px;
   margin-left: 7px;
@@ -3940,7 +3927,9 @@ footer.chatbar .chatbar-input {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: 7px;
+  bottom: 7px;
   height: 35px;
   margin-right: 7px;
   padding: 0 8px;
@@ -7353,7 +7342,7 @@ header.statistics-interaction-header span {
   .ios-8 footer.chatbar {
     border-width: .5px;
   }
-  .ios-8 footer.chatbar input.chatbar-text {
+  .ios-8 footer.chatbar .chatbar-text {
     border-width: .5px;
   }
   .ios-8 footer.chatbar button.chatbar-button {
@@ -7464,7 +7453,7 @@ header.statistics-interaction-header span {
   .ios-8 footer.chatbar {
     border-width: .33px;
   }
-  .ios-8 footer.chatbar input.chatbar-text {
+  .ios-8 footer.chatbar .chatbar-text {
     border-width: .33px;
   }
   .ios-8 footer.chatbar button.chatbar-button {
