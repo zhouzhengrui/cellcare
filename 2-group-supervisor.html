@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <title>创建群组</title>
+    <title>添加监督者</title>
     <!-- CSS -->
     <link rel="stylesheet" href="icofont/style.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,14 +19,14 @@
 
 <body onload="loaded()">
     <!-- header start -->
-    <header class="group-build">
+    <header class="group-build group-build-supervisor">
+        <!-- 已添加的监督者不可移除 -->
         <!-- item start -->
         <div class="item">
             <div class="avatar">
                 <img src="http://img.la/50x50" alt="">
             </div>
-            <h5 class="name">李先生</h5>
-            <p class="role">顾客</p>
+            <h5 class="name">阿星</h5>
         </div>
         <!-- item over -->
         <!-- item start -->
@@ -34,17 +34,7 @@
             <div class="avatar">
                 <img src="http://img.la/50x50" alt="">
             </div>
-            <h5 class="name">John</h5>
-            <p class="role">主诊</p>
-        </div>
-        <!-- item over -->
-        <!-- item start -->
-        <div class="item">
-            <div class="avatar">
-                <img src="http://img.la/50x50" alt="">
-            </div>
-            <h5 class="name">Michelle</h5>
-            <p class="role">医助</p>
+            <h5 class="name">彦祖</h5>
         </div>
         <!-- item over -->
         <!-- item start -->
@@ -53,8 +43,16 @@
                 <img src="http://img.la/50x50" alt="">
                 <button class="delete"><i class="icon-cancel-2"></i></button>
             </div>
-            <h5 class="name">韩梅梅</h5>
-            <p class="role">顾问</p>
+            <h5 class="name">尹天仇</h5>
+        </div>
+        <!-- item over -->
+        <!-- item start -->
+        <div class="item">
+            <div class="avatar">
+                <img src="http://img.la/50x50" alt="">
+                <button class="delete"><i class="icon-cancel-2"></i></button>
+            </div>
+            <h5 class="name">德华</h5>
         </div>
         <!-- item over -->
     </header>
@@ -77,54 +75,34 @@
     <!-- main start -->
     <div class="main main-gray">
         <div class="scroller">
-            <!-- store start -->
-            <div class="title-store">
-                <h3>上海门诊</h3>
-            </div>
-            <!-- store over -->
             <!-- list start -->
             <div class="list">
+                <!-- 已添加的监督者列表组不可编辑, .item添加类名.disabled -->
                 <!-- item start -->
-                <label class="item waves-effect">
+                <label class="item waves-effect disabled">
                     <div class="avatar">
                         <img src="http://img.la/50x50" alt="">
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>Michelle</p>
-                            <p class="small gray">医助</p>
+                            <p>阿星</p>
+                            <p class="small gray">上海门诊 门诊主任</p>
                         </div>
                         <div class="radio-checkbox">
-                            <input type="radio" name="radio-1">
+                            <input type="radio" name="radio-1" checked>
                         </div>
                     </div>
                 </label>
                 <!-- item over -->
                 <!-- item start -->
-                <label class="item waves-effect">
+                <label class="item waves-effect disabled">
                     <div class="avatar">
                         <img src="http://img.la/50x50" alt="">
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>Michelle</p>
-                            <p class="small gray">医助</p>
-                        </div>
-                        <div class="radio-checkbox">
-                            <input type="radio" name="radio-1">
-                        </div>
-                    </div>
-                </label>
-                <!-- item over -->
-                <!-- item start -->
-                <label class="item waves-effect">
-                    <div class="avatar">
-                        <img src="http://img.la/50x50" alt="">
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <p>Michelle</p>
-                            <p class="small gray">医助</p>
+                            <p>阿星</p>
+                            <p class="small gray">北京门诊 门诊主任</p>
                         </div>
                         <div class="radio-checkbox">
                             <input type="radio" name="radio-1">
@@ -134,18 +112,18 @@
                 <!-- item over -->
             </div>
             <!-- list over -->
+            <div class="spacing"></div>
             <!-- list start -->
             <div class="list">
-                <div class="divder align-center">上海金茂店</div>
                 <!-- item start -->
-                <label class="item waves-effect">
+                <label class="item waves-effect disabled">
                     <div class="avatar">
                         <img src="http://img.la/50x50" alt="">
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
+                            <p>彦祖</p>
+                            <p class="small gray">上海长宁龙之梦店 门店主任</p>
                         </div>
                         <div class="radio-checkbox">
                             <input type="radio" name="radio-2" checked>
@@ -154,30 +132,14 @@
                 </label>
                 <!-- item over -->
                 <!-- item start -->
-                <label class="item waves-effect">
+                <label class="item waves-effect disabled">
                     <div class="avatar">
                         <img src="http://img.la/50x50" alt="">
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
-                        </div>
-                        <div class="radio-checkbox">
-                            <input type="radio" name="radio-2">
-                        </div>
-                    </div>
-                </label>
-                <!-- item over -->
-                <!-- item start -->
-                <label class="item waves-effect">
-                    <div class="avatar">
-                        <img src="http://img.la/50x50" alt="">
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
+                            <p>彦祖</p>
+                            <p class="small gray">上海长宁龙之梦店 门店主任</p>
                         </div>
                         <div class="radio-checkbox">
                             <input type="radio" name="radio-2">
@@ -187,9 +149,9 @@
                 <!-- item over -->
             </div>
             <!-- list over -->
+            <div class="spacing"></div>
             <!-- list start -->
             <div class="list">
-                <div class="divder align-center">上海长宁龙之梦店</div>
                 <!-- item start -->
                 <label class="item waves-effect">
                     <div class="avatar">
@@ -197,11 +159,11 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
+                            <p>尹天仇</p>
+                            <p class="small gray">医美区域经理</p>
                         </div>
                         <div class="radio-checkbox">
-                            <input type="radio" name="radio-2">
+                            <input type="radio" name="radio-3">
                         </div>
                     </div>
                 </label>
@@ -213,11 +175,32 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
+                            <p>尹天仇</p>
+                            <p class="small gray">医美区域经理</p>
                         </div>
                         <div class="radio-checkbox">
-                            <input type="radio" name="radio-2">
+                            <input type="radio" name="radio-3">
+                        </div>
+                    </div>
+                </label>
+                <!-- item over -->
+            </div>
+            <!-- list over -->
+            <div class="spacing"></div>
+            <!-- list start -->
+            <div class="list">
+                <!-- item start -->
+                <label class="item waves-effect">
+                    <div class="avatar">
+                        <img src="http://img.la/50x50" alt="">
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <p>德华</p>
+                            <p class="small gray">生美区域经理</p>
+                        </div>
+                        <div class="radio-checkbox">
+                            <input type="radio" name="radio-4">
                         </div>
                     </div>
                 </label>
@@ -229,11 +212,11 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <p>韩梅梅</p>
-                            <p class="small gray">顾问</p>
+                            <p>德华</p>
+                            <p class="small gray">生美区域经理</p>
                         </div>
                         <div class="radio-checkbox">
-                            <input type="radio" name="radio-2">
+                            <input type="radio" name="radio-4">
                         </div>
                     </div>
                 </label>
@@ -249,7 +232,7 @@
         <div class="md-main">
             <!-- content start -->
             <div class="modal-title justify-content-center">
-                <h3 class="title">群组成员</h3>
+                <h3 class="title">监督者</h3>
             </div>
             <div class="modal-content">
                 <!-- group start -->
@@ -259,8 +242,7 @@
                         <div class="avatar">
                             <img src="http://img.la/50x50" alt="">
                         </div>
-                        <h5 class="name">李先生</h5>
-                        <p class="role">顾客</p>
+                        <h5 class="name">阿星</h5>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
@@ -268,8 +250,7 @@
                         <div class="avatar">
                             <img src="http://img.la/50x50" alt="">
                         </div>
-                        <h5 class="name">韩梅梅</h5>
-                        <p class="role">顾问</p>
+                        <h5 class="name">彦祖</h5>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
@@ -277,8 +258,7 @@
                         <div class="avatar">
                             <img src="http://img.la/50x50" alt="">
                         </div>
-                        <h5 class="name">John</h5>
-                        <p class="role">主诊</p>
+                        <h5 class="name">尹天仇</h5>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
@@ -286,8 +266,7 @@
                         <div class="avatar">
                             <img src="http://img.la/50x50" alt="">
                         </div>
-                        <h5 class="name">Michelle</h5>
-                        <p class="role">医助</p>
+                        <h5 class="name">德华</h5>
                     </div>
                     <!-- item over -->
                 </div>
