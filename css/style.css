@@ -3315,6 +3315,55 @@ button.swiper-pagination-bullet {
   width: 70px;
 }
 
+.list-reportforms {
+  margin: 15px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+}
+
+.region-reportforms {
+  text-align: center;
+  margin: 15px;
+}
+
+.list-reportforms .clinic {
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #F5F6F7;
+  border-bottom: 1px solid #DDDDDD;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.list-reportforms .item {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.list-reportforms .item:last-child {
+  border-bottom: 0;
+}
+
+.list-reportforms .statistics-interaction {
+  padding: 10px 0;
+  border-bottom: 0;
+}
+
+.list-reportforms .statistics-interaction-info {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.list-reportforms .statistics-interaction-info p {
+  font-size: 14px;
+}
+
+.list-reportforms .statistics-interaction-row .statistics-interaction-item:last-child {
+  border-right: 0;
+}
+
 .load-more {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -7642,6 +7691,16 @@ header.statistics-interaction-header span {
   border-left: 1px solid #DDDDDD;
 }
 
+header.statistics-supervisor-header {
+  padding-left: 15px;
+}
+
+header.statistics-supervisor-header span {
+  width: 28%;
+  text-align: center;
+  border-left: 1px solid #DDDDDD;
+}
+
 .statistics-binding {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7688,6 +7747,10 @@ header.statistics-interaction-header span {
   display: flex;
   margin-top: 7px;
   line-height: 1;
+}
+
+.statistics-interaction .statistics-interaction-row.border-left {
+  border-left: 1px solid #DDDDDD;
 }
 
 .statistics-interaction .statistics-interaction-divder {

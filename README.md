@@ -10,7 +10,15 @@
 
 <https://zhouzhengrui.github.io/cellcare/3-storemanager.html> 店长应用
 
+<https://zhouzhengrui.github.io/cellcare/4-supervisor-user-1.html> 区域经理
+
+<https://zhouzhengrui.github.io/cellcare/4-supervisor-user-2.html> 主任
+
 ## Update
+
+### 2018-1-2
+
+- 新增区域经理/主任的报表页面
 
 ### 2017-4-22
 
@@ -94,5 +102,10 @@
 - 店长应用 `3-storemanager.html`
 - 店长应用-绑定统计 `3-binding.html`
 - 店长应用-互动统计 `3-interaction.html`
+
+- 区域经理 `4-supervisor-user-1.html`
+- 区域经理-每日跟进表 `4-supervisor-user-reportforms-1.html`
+- 主任 `4-supervisor-user-2.html`
+- 主任-每日跟进表 `4-supervisor-user-reportforms-2.html`
 
 [⬆ back to top](#readme)
