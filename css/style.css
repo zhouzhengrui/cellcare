@@ -3326,6 +3326,15 @@ button.swiper-pagination-bullet {
   margin: 15px;
 }
 
+.region-reportforms select {
+  font-size: 20px;
+  padding: 0 20px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 12px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23dddddd' d='M25,37L1,13h48L25,37z'/%3E%3C/svg%3E");
+}
+
 .list-reportforms .clinic {
   padding: 8px;
   font-size: 16px;
