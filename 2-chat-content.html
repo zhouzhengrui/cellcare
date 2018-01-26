@@ -509,6 +509,12 @@
         };
         var text = document.getElementById("textarea");
         autoTextarea(text);
+
+        // 安卓长按弹出修复
+        window.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        });
+
     </script>
 
 </body>
