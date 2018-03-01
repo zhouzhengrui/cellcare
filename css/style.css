@@ -3321,20 +3321,6 @@ button.swiper-pagination-bullet {
   border-radius: 4px;
 }
 
-.region-reportforms {
-  text-align: center;
-  margin: 15px;
-}
-
-.region-reportforms select {
-  font-size: 20px;
-  padding: 0 20px;
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: 12px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23dddddd' d='M25,37L1,13h48L25,37z'/%3E%3C/svg%3E");
-}
-
 .list-reportforms .clinic {
   padding: 8px;
   font-size: 16px;
@@ -7686,7 +7672,7 @@ header.statistics-binding-header {
 }
 
 header.statistics-binding-header .interaction {
-  width: 60px;
+  width: 65px;
   text-align: center;
   border-left: 1px solid #DDDDDD;
 }
@@ -7722,7 +7708,7 @@ header.statistics-supervisor-header .interaction {
 }
 
 .statistics-binding .statistics-item {
-  width: 60px;
+  width: 65px;
   text-align: center;
 }
 
@@ -7894,6 +7880,55 @@ header.statistics-supervisor-header .interaction {
   color: #669933;
   -webkit-animation: voicePlay 1s infinite;
   animation: voicePlay 1s infinite;
+}
+
+.region-reportforms {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  text-align: center;
+  background-color: #F5F6F7;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.region-reportforms select {
+  font-size: 20px;
+  padding: 0 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 12px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23dddddd' d='M25,37L1,13h48L25,37z'/%3E%3C/svg%3E");
+}
+
+.region-reportforms ~ header.statistics {
+  top: 40px;
+}
+
+.region-reportforms ~ header.statistics ~ .main {
+  margin-top: 80px;
+}
+
+.prompt {
+  font-size: 12px;
+  text-align: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
